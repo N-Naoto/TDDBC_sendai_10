@@ -3,5 +3,3 @@ def fizzbuzz_convert(num):
         return 'Fizz'
     if num == 5:
         return 'Buzz'
-    
-    

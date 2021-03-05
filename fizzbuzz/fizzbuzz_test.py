@@ -1,4 +1,4 @@
-from fizzbuzz import fizzbuzz_convert
+from fizzbuzz.fizzbuzz import fizzbuzz_convert
 
 
 class TestFizzBuzz:
