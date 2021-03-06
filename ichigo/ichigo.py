@@ -1,0 +1,2 @@
+class Ichigo:
+    pass
