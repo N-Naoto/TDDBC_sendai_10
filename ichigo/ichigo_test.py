@@ -6,3 +6,4 @@ class TestIchigo:
         ichigo = Ichigo("あまおう", "S")
 
         assert str(ichigo) == "あまおう: S"
+
