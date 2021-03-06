@@ -1,8 +1,7 @@
-class Ichigo:
-    def __init__(self, ichigo: str, size: str) -> None:
-        self.ichigo = ichigo
-        self.size = size
+class いちご:
+    def __init__(self, 品種: str, サイズ: str) -> None:
+        self.品種 = 品種
+        self.サイズ = サイズ
 
     def __str__(self) -> str:
-        # str() を呼ぶと ここが実行される！ == 文字列表現
         return "あまおう: S"

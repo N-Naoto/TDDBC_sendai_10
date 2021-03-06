@@ -1,9 +1,8 @@
-from ichigo.ichigo import Ichigo
+from ichigo.ichigo import いちご
 
 
 class TestIchigo:
     def test_いちごの文字列表現を取得できる_あまおうSサイズ(self):
-        ichigo = Ichigo("あまおう", "S")
+        ichigo = いちご("あまおう", "S")
 
         assert str(ichigo) == "あまおう: S"
-
