@@ -5,6 +5,10 @@
 - [はじめに](https://hackmd.io/opUU1f8lTh6VwDsyZoIy6A))
 - [お題1](https://hackmd.io/@135yshr/rkxjun1mO)
 
+## 気になること とか あとで調べられた嬉しい(けど、いまは調べなくてもいいやって判断したやつ)
+- [ ] クラスの書き方が怪しい
+- [ ] エラー文読み慣れてない
+
 ## TODO
 - [x] strawberryのスペルがむずいので、ichigoにした！
 - [ ] いちごの文字列表現を取得できる
