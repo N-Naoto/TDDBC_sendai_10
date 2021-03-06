@@ -21,3 +21,8 @@ class TestIchigo:
         ichigo = いちご.create_from_weight("あまおう", 25)
 
         assert str(ichigo) == "あまおう: LL"
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_20gはLサイズ(self):
+        ichigo = いちご.create_from_weight("あまおう", 20)
+
+        assert str(ichigo) == "あまおう: L"
