@@ -1,18 +1,18 @@
+import pytest
+
 from ichigo.ichigo import いちご
 
 
 class TestIchigo:
-    def test_いちごの文字列表現を取得できる_あまおうSサイズ(self):
-        ichigo = いちご("あまおう", "S")
+    @pytest.mark.parametrize(
+        "品種, サイズ, expected",
+        (
+            ("あまおう", "S", "あまおう: S"),
+            ("とちおとめ", "M", "とちおとめ: M"),
+            ("もういっこ", "L", "もういっこ: L"),
+        ),
+    )
+    def test_いちごの文字列表現(self, 品種: str, サイズ: str, expected: str):
+        ichigo = いちご(品種, サイズ)
 
-        assert str(ichigo) == "あまおう: S"
-
-    def test_いちごの文字列表現を取得できる_とちおとめMサイズ(self):
-        ichigo = いちご("とちおとめ", "M")
-
-        assert str(ichigo) == "とちおとめ: M"
-
-    def test_いちごの文字列表現を取得できる_もういっこLサイズ(self):
-        ichigo = いちご("もういっこ", "L")
-
-        assert str(ichigo) == "もういっこ: L"
+        assert str(ichigo) == expected
