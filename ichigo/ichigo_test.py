@@ -1,3 +1,5 @@
+import random
+
 from typing import get_args
 import pytest
 
@@ -53,3 +55,14 @@ class TestIchigo:
         ichigo = いちご.create_from_weight("もういっこ", 1)
 
         assert str(ichigo) == "もういっこ: S"
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_品種無関係版_9gはMサイズ_上限(self):
+        # 品種が無関係ですよアピールするなら、これもあり？
+        # このテスト1件があれば、よいかもしれない！(他のケースはベタ書きでいいかも！)
+        random_品種 = self._random_品種()
+        ichigo = いちご.create_from_weight(random_品種, 9)
+
+        assert str(ichigo) == f"{random_品種}: S"
+
+    def _random_品種(self):
+        return random.choice(["あまおう", "とちおとめ", "もういっこ"])
