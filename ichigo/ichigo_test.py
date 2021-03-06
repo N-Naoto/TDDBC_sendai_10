@@ -16,3 +16,8 @@ class TestIchigo:
         ichigo = いちご(品種, サイズ)
 
         assert str(ichigo) == expected
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_25gはLLサイズ(self):
+        ichigo = いちご.create_from_weight("あまおう", 25)
+
+        assert str(ichigo) == "あまおう: LL"
