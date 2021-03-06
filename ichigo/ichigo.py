@@ -11,10 +11,8 @@ class いちご:
 
     @classmethod
     def create_from_weight(cls, 品種: str, 重さ: int) -> いちご:
-        if 25 <= 重さ :
-            サイズ = 'LL' 
+        if 25 <= 重さ:
+            return いちご(品種, "LL")
 
-        if 20 <= 重さ < 25 :
-            サイズ = 'L'
-        
-        return いちご(品種, サイズ)
+        if 20 <= 重さ < 25:
+            return いちご(品種, "L")

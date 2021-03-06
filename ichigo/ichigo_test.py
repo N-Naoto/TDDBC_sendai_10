@@ -32,3 +32,5 @@ class TestIchigo:
         ichigo = いちご.create_from_weight("あまおう", 24)
 
         assert str(ichigo) == "あまおう: L"
+
+
