@@ -17,13 +17,18 @@ class TestIchigo:
 
         assert str(ichigo) == expected
 
-    def test_サイズではなく重さを直接与えていちごを作成できる_25gはLLサイズ(self):
+    def test_サイズではなく重さを直接与えていちごを作成できる_25gはLLサイズ_下限(self):
         ichigo = いちご.create_from_weight("あまおう", 25)
 
         assert str(ichigo) == "あまおう: LL"
 
-    def test_サイズではなく重さを直接与えていちごを作成できる_20gはLサイズ(self):
+    def test_サイズではなく重さを直接与えていちごを作成できる_20gはLサイズ_下限(self):
         # MEMO: メソッド名は and品種 も必要なのでは？
         ichigo = いちご.create_from_weight("あまおう", 20)
+
+        assert str(ichigo) == "あまおう: L"
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_24gはLサイズ_上限(self):
+        ichigo = いちご.create_from_weight("あまおう", 24)
 
         assert str(ichigo) == "あまおう: L"
