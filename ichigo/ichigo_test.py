@@ -50,6 +50,6 @@ class TestIchigo:
         assert str(ichigo) == "あまおう: S"
 
     def test_サイズではなく重さを直接与えていちごを作成できる_1gはMサイズ_下限(self):
-        ichigo = いちご.create_from_weight("あまおう", 1)
+        ichigo = いちご.create_from_weight("もういっこ", 1)
 
-        assert str(ichigo) == "あまおう: S"
+        assert str(ichigo) == "もういっこ: S"
