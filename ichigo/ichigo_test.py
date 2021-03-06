@@ -1,3 +1,4 @@
+from typing import get_args
 import pytest
 
 from ichigo.ichigo import いちご
@@ -37,3 +38,18 @@ class TestIchigo:
         ichigo = いちご.create_from_weight("あまおう", 19)
 
         assert str(ichigo) == "あまおう: M"
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_10gはMサイズ_下限(self):
+        ichigo = いちご.create_from_weight("あまおう", 10)
+
+        assert str(ichigo) == "あまおう: M"
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_9gはMサイズ_上限(self):
+        ichigo = いちご.create_from_weight("あまおう", 9)
+
+        assert str(ichigo) == "あまおう: S"
+
+    def test_サイズではなく重さを直接与えていちごを作成できる_1gはMサイズ_下限(self):
+        ichigo = いちご.create_from_weight("あまおう", 1)
+
+        assert str(ichigo) == "あまおう: S"
